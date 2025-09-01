@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TechBlog</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title if title else "TechBlog" }}</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">TechBlog</div>
-    <ul class="nav-links">
-      <li><a href="{{ url_for('home') }}">Home</a></li>
-      <li><a href="{{ url_for('category', category='AI') }}">AI</a></li>
-      <li><a href="{{ url_for('category', category='Blockchain') }}">Blockchain</a></li>
-      <li><a href="{{ url_for('category', category='Programming') }}">Programming</a></li>
-      <li><a href="#about">About</a></li>
-    </ul>
-    <form class="search-bar" action="{{ url_for('search') }}">
-      <input type="text" name="q" placeholder="Search blogs...">
-    </form>
-  </nav>
+  <header>
+    <nav class="navbar">
+      <div class="logo">TechBlog</div>
+      <ul class="nav-links">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('blog') }}">Blog</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  {% block content %}{% endblock %}
+  <main>
+    {% block content %}{% endblock %}
+  </main>
 
-  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  <footer>
+    <p>&copy; 2025 TechBlog. All rights reserved.</p>
+  </footer>
 </body>
 </html>
