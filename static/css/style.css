@@ -1,0 +1,90 @@
+/* Reset */
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f9f9fb;
+  color: #333;
+  line-height: 1.6;
+}
+
+header, footer {
+  background: #1a1a2e;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+header nav a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  border-bottom: 2px solid #e94560;
+}
+
+.hero {
+  height: 60vh;
+  background: linear-gradient(to right, #1a1a2e, #16213e);
+  display: flex; justify-content: center; align-items: center;
+  color: white; text-align: center;
+}
+
+.hero .btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: #e94560;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.hero .btn:hover {
+  background: #ff2e63;
+}
+
+.featured {
+  padding: 3rem 2rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.btn-small {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  background: #1a1a2e;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.btn-small:hover {
+  background: #16213e;
+}
