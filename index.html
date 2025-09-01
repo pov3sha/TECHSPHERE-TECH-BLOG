@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <div class="hero-text">
+    <h1>TechSphere Blog</h1>
+    <p>Dive into technology, coding trends, and innovation</p>
+    <a href="/blog" class="btn">Explore Blogs</a>
+  </div>
+</section>
+
+<section class="featured">
+  <h2>Featured Articles</h2>
+  <div class="card-grid">
+    {% for post in posts[:3] %}
+    <div class="card">
+      <img src="{{ url_for('static', filename='images/' ~ post.image) }}" alt="{{ post.title }}">
+      <div class="card-body">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.excerpt }}</p>
+        <a href="/blog/{{ post.id }}" class="btn-small">Read More</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
