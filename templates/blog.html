@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="blog-list">
+  <h2>All Blog Posts</h2>
+  <ul>
+    <li>
+      <h3><a href="{{ url_for('blog_detail', blog_id=1) }}">The Future of AI</a></h3>
+      <p>Short summary of AI advancements and their global impact.</p>
+    </li>
+    <li>
+      <h3><a href="{{ url_for('blog_detail', blog_id=2) }}">Web Development Trends 2025</a></h3>
+      <p>Key trends you need to know if you’re a web developer.</p>
+    </li>
+    <li>
+      <h3><a href="{{ url_for('blog_detail', blog_id=3) }}">Cybersecurity in a Digital World</a></h3>
+      <p>Why cyber defense is the backbone of the internet age.</p>
+    </li>
+  </ul>
+</section>
+{% endblock %}
